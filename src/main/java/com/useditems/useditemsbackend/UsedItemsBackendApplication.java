@@ -11,6 +11,7 @@ public class UsedItemsBackendApplication {
 
         System.out.println("Herman");
         System.out.println("Tobi");
+        System.out.println("Kai");
     }
 
 }
