@@ -8,6 +8,8 @@ public class UsedItemsBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(UsedItemsBackendApplication.class, args);
+
+        System.out.println("Tobi");
     }
 
 }
