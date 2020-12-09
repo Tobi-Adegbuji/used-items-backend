@@ -4,6 +4,7 @@ import com.useditems.useditemsbackend.dao.UserRepo;
 import com.useditems.useditemsbackend.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -30,5 +31,11 @@ public class UserServiceImpl implements UserService{
     public List<User> findAllUsers() {
         log.info("List was retrieved.");
         return userRepo.findAll();
+    }
+
+    @Transactional
+    @Override
+    public void deleteByFirstName(String name) {
+        userRepo.deleteByFirstName(name);
     }
 }
