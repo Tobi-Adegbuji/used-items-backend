@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Furniture extends Item{
+public class Electronic extends Item{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -20,7 +20,9 @@ public class Furniture extends Item{
     @Enumerated(EnumType.STRING)
     private ItemCondition itemCondition;
 
-    private double weight;
+    private String manufacture;
+
+
 
 
 
