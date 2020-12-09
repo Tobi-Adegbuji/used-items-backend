@@ -5,11 +5,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Item {
 
+public class Item {
 
     private String year;
 
@@ -17,8 +14,37 @@ public class Item {
 
     private String description;
 
-
-    private Condition condition;
-
     private String email;
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
