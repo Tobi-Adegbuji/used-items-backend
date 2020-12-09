@@ -18,7 +18,7 @@ public class Furniture extends Item{
     private long id;
 
     @Enumerated(EnumType.STRING)
-    private Condition condition;
+    private ItemCondition itemCondition;
 
     private double weight;
 

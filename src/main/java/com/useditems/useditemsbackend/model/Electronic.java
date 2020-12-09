@@ -18,7 +18,7 @@ public class Electronic extends Item{
     private long id;
 
     @Enumerated(EnumType.STRING)
-    private Condition condition;
+    private ItemCondition itemCondition;
 
     private String manufacture;
 
