@@ -10,6 +10,6 @@ public interface UserRepo extends CrudRepository<User,Long> {
 
     List<User> findAll();
 
-    void deleteByFirstName(String firstName);
+
 
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service("userServiceImpl")
@@ -33,9 +34,20 @@ public class UserServiceImpl implements UserService{
         return userRepo.findAll();
     }
 
-    @Transactional
+
+
+   @Override
+    public User findById(Long id) {
+      Optional <User> optionalUser = userRepo.findById(id);
+      if(optionalUser.isPresent()){
+          return optionalUser.get();
+      }else{
+          return new User();
+      }
+    }
+
     @Override
-    public void deleteByFirstName(String name) {
-        userRepo.deleteByFirstName(name);
+    public void deleteById(Long id) {
+        userRepo.deleteById(id);
     }
 }
