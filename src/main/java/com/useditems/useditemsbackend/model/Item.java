@@ -1,15 +1,15 @@
 package com.useditems.useditemsbackend.model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
-@Entity
+
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Item {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+
 
     private String year;
 
@@ -17,7 +17,7 @@ public class Item {
 
     private String description;
 
-    @Enumerated(EnumType.STRING)
+
     private Condition condition;
 
     private String email;
