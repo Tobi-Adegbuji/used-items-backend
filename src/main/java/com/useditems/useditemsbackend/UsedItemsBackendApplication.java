@@ -1,6 +1,6 @@
 package com.useditems.useditemsbackend;
 
-import com.useditems.useditemsbackend.model.Item;
+import com.useditems.useditemsbackend.model.Furniture;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +9,10 @@ public class UsedItemsBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(UsedItemsBackendApplication.class, args);
+
+        System.out.println("Herman");
+        System.out.println("Tobi");
+        System.out.println("Kai");
     }
 
 }
