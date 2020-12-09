@@ -24,12 +24,12 @@ public class UserServiceImpl implements UserService{
     public void saveUser(User user) {
         if(user != null)
             userRepo.save(user);
-        log.info(user.getFirstName() + " was created.");
+       // log.info(user.getFirstName() + " was created.");
     }
 
     @Override
     public List<User> findAllUsers() {
-        log.info("List was retrieved.");
+        //log.info("List was retrieved.");
         return userRepo.findAll();
     }
 
