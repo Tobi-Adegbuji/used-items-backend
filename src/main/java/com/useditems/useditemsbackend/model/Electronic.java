@@ -22,10 +22,27 @@ public class Electronic extends Item{
 
     private String manufacture;
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public ItemCondition getItemCondition() {
+        return itemCondition;
+    }
 
+    public void setItemCondition(ItemCondition itemCondition) {
+        this.itemCondition = itemCondition;
+    }
 
+    public String getManufacture() {
+        return manufacture;
+    }
 
-
+    public void setManufacture(String manufacture) {
+        this.manufacture = manufacture;
+    }
 }
