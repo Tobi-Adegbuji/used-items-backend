@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 
-
+@MappedSuperclass
 public class Item {
 
     private String year;

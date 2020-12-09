@@ -22,7 +22,6 @@ public class UserRestController {
         user.setId(0L);
         userService.saveUser(user);
         return user;
-
     }
 
     @GetMapping("/user")
@@ -32,7 +31,6 @@ public class UserRestController {
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable  Long id){
-
         if(userService.findById(id).getId()==0){
             return null;
         }else{
@@ -48,7 +46,6 @@ public class UserRestController {
 
     @DeleteMapping("/user/{id}")
     public void deleteUserByName(@PathVariable Long id){
-
         userService.deleteById(id);
     }
 
