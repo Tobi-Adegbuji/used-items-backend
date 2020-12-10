@@ -44,7 +44,7 @@ public class ElectronicsController {
         return electronic;
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/electronic/{id}")
     public void deleteUserByName(@PathVariable Long id){
 
         electronicService.deleteById(id);
