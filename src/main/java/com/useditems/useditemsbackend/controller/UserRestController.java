@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = { "http://localhost:3000"})
 @RestController
 public class UserRestController {
 
@@ -17,19 +18,19 @@ public class UserRestController {
     }
 
 
-    @PostMapping("/user")
+    @PostMapping("/users")
     public User createUser(@RequestBody User user){
         user.setId(0L);
         userService.saveUser(user);
         return user;
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public List<User> retrieveAllUsers(){
         return userService.findAllUsers();
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/users/{id}")
     public User findById(@PathVariable  Long id){
         if(userService.findById(id).getId()==0){
             return null;
@@ -38,13 +39,13 @@ public class UserRestController {
         }
     }
 
-    @PutMapping("/updateUser")
+    @PutMapping("/users")
     public User update(@RequestBody User user){
         userService.saveUser(user);
         return user;
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/users/{id}")
     public void deleteUserByName(@PathVariable Long id){
         userService.deleteById(id);
     }
