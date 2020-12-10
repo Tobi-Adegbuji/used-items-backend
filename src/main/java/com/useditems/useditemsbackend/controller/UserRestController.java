@@ -1,7 +1,7 @@
 package com.useditems.useditemsbackend.controller;
 import com.useditems.useditemsbackend.model.User;
 import com.useditems.useditemsbackend.services.UserService;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
