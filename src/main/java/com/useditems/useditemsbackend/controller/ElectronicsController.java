@@ -24,7 +24,7 @@ public class ElectronicsController {
     }
 
     @GetMapping("/electronic")
-    public List<Electronic> retrieveAllUsers(){
+    public List<Electronic> retrieveAllElectronics(){
         return electronicService.findAllElectronics();
     }
 
@@ -44,7 +44,7 @@ public class ElectronicsController {
         return electronic;
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/electronic/{id}")
     public void deleteUserByName(@PathVariable Long id){
 
         electronicService.deleteById(id);
