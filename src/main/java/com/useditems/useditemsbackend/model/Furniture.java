@@ -17,11 +17,14 @@ public class Furniture extends Item{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private ItemCondition itemCondition;
 
+    @Column(nullable = false)
     private double weight;
 
     public long getId() {

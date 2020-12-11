@@ -8,12 +8,16 @@ import javax.persistence.*;
 @MappedSuperclass
 public class Item {
 
+    @Column(nullable = false)
     private String year;
 
+    @Column(nullable = false)
     private double price;
 
+    @Column(nullable = false)
     private String description;
 
+    @Column(nullable = false)
     private String email;
 
     public String getYear() {
