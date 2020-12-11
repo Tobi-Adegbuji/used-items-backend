@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = { "http://localhost:3000"})
+@RestController
 public class ElectronicsController {
 
     private final ElectronicService electronicService;
 
-    public ElectronicsController(@Qualifier("electronicServiceImpl") ElectronicService electronicService) {
+    public ElectronicsController(ElectronicService electronicService) {
         this.electronicService = electronicService;
     }
 
@@ -24,7 +26,7 @@ public class ElectronicsController {
     }
 
     @GetMapping("/electronic")
-    public List<Electronic> retrieveAllUsers(){
+    public List<Electronic> retrieveAllElectronics(){
         return electronicService.findAllElectronics();
     }
 
@@ -45,7 +47,7 @@ public class ElectronicsController {
     }
 
     @DeleteMapping("/user/{id}")
-    public void deleteUserByName(@PathVariable Long id){
+    public void deleteElectronicByName(@PathVariable Long id){
 
         electronicService.deleteById(id);
     }

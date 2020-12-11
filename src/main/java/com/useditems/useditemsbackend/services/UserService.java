@@ -13,4 +13,6 @@ public interface UserService {
     User findById(Long id);
 
     void deleteById(Long id);
+
+    User findByUsernameAndPassword(String username, String password);
 }

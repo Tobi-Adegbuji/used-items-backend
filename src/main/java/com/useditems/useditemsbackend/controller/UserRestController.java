@@ -1,5 +1,6 @@
 package com.useditems.useditemsbackend.controller;
 import com.useditems.useditemsbackend.model.User;
+import com.useditems.useditemsbackend.model.UserCredentials;
 import com.useditems.useditemsbackend.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,6 +31,11 @@ public class UserRestController {
         return userService.findAllUsers();
     }
 
+    @GetMapping("/authUsers")
+    public User authenticate(@RequestBody UserCredentials userCredentials){
+       return userService.findByUsernameAndPassword(userCredentials.getUserName(), userCredentials.getPassword());
+    }
+
     @GetMapping("/users/{id}")
     public User findById(@PathVariable  Long id){
         if(userService.findById(id).getId()==0){
@@ -49,6 +55,8 @@ public class UserRestController {
     public void deleteUserByName(@PathVariable Long id){
         userService.deleteById(id);
     }
+
+
 
 
 }
