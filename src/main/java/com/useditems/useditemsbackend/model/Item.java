@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
-
+//Contains variables that are shared between other entities
 @MappedSuperclass
 public class Item {
 
