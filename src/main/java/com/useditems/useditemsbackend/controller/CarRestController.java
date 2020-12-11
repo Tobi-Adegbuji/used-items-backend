@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @CrossOrigin(origins = { "http://localhost:3000"})
-@RestController()
+@RestController
 public class CarRestController {
+
 
     private final CarService carService;
 
@@ -21,17 +22,20 @@ public class CarRestController {
     @ResponseStatus(HttpStatus.OK)
     @PostMapping("/cars")
     public Car createCar(@RequestBody Car car){
+        //Setting ID to 0 in order to auto increment
         car.setId(0);
         carService.saveCar(car);
         return car;
     }
 
+    //Retrieves list of cars from car repo
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/cars")
     public List<Car> retrieveAllCars(){
         return carService.findAllCars();
     }
 
+    //Finds car by id from car repo
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/cars/{id}")
     public Car findById(@PathVariable Long id){
@@ -42,6 +46,7 @@ public class CarRestController {
         }
     }
 
+    //Updates car in car repo
     @ResponseStatus(HttpStatus.OK)
     @PutMapping("/car")
     public Car update(@RequestBody Car car){
@@ -49,6 +54,7 @@ public class CarRestController {
         return car;
     }
 
+    //Deletes car by
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/cars/{id}")
     public void deleteCarById(@PathVariable Long id){
