@@ -4,10 +4,12 @@ import com.useditems.useditemsbackend.dao.ElectronicRepo;
 import com.useditems.useditemsbackend.dao.UserRepo;
 import com.useditems.useditemsbackend.model.Electronic;
 import com.useditems.useditemsbackend.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ElectronicServiceImpl implements ElectronicService{
 
     private final ElectronicRepo electronicRepo;

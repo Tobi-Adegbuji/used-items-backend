@@ -10,6 +10,6 @@ public interface UserRepo extends CrudRepository<User,Long> {
 
     List<User> findAll();
 
-
+    User findByUserNameAndPassword(String username, String password);
 
 }
