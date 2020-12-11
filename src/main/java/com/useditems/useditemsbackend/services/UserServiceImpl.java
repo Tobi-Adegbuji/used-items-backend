@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-@Slf4j
 @Service("userServiceImpl")
 public class UserServiceImpl implements UserService{
 
@@ -49,5 +48,14 @@ public class UserServiceImpl implements UserService{
     @Override
     public void deleteById(Long id) {
         userRepo.deleteById(id);
+    }
+
+    @Override
+    public User findByUsernameAndPassword(String username, String password) {
+       User user = userRepo.findByUserNameAndPassword(username, password);
+       if(user == null)
+           return new User();
+       else
+           return user;
     }
 }

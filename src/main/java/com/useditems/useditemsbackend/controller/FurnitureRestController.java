@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = { "http://localhost:3000"})
 @RestController
 public class FurnitureRestController {
 
     private final FurnitureService furnitureService;
 
-    public FurnitureRestController(@Qualifier("FurnitureServiceImpl") FurnitureService furnitureService) {
+    public FurnitureRestController(FurnitureService furnitureService) {
         this.furnitureService = furnitureService;
     }
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service("FurnitureServiceImpl")
+@Service()
 public class FurnitureServiceImpl implements FurnitureService{
 
     private final FurnitureRepo furnitureRepo;
