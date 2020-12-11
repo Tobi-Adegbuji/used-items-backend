@@ -17,13 +17,17 @@ public class Car extends Item{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private ItemCondition itemCondition;
 
+    @Column(nullable = false)
     private String make;
 
+    @Column(nullable = false)
     private String model;
 
+    @Column(nullable = false)
     private int mileage;
 
 

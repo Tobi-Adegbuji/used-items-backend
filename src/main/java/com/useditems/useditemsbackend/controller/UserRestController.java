@@ -31,7 +31,7 @@ public class UserRestController {
         return userService.findAllUsers();
     }
 
-    @GetMapping("/authUsers")
+    @PostMapping("/authUsers")
     public User authenticate(@RequestBody UserCredentials userCredentials){
        return userService.findByUsernameAndPassword(userCredentials.getUserName(), userCredentials.getPassword());
     }
